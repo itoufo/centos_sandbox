@@ -1,9 +1,14 @@
 {
+  "firewall":{
+    "allow_ssh": true,
+    "allow_html": true
+  },
   "nginx":{
     "port": 8888
   },
   "run_list": [
     "yum-epel",
+    "firewall",
     "nginx"
   ],
   "automatic": {
