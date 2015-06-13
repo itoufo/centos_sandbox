@@ -1,5 +1,9 @@
 {
+  "nginx":{
+    "port": 8888
+  },
   "run_list": [
+    "yum::epel",
     "nginx"
   ],
   "automatic": {
