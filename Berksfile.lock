@@ -1,11 +1,14 @@
 DEPENDENCIES
   yum-epel
+  yum-remi
   yum-repoforge
 
 GRAPH
   yum (3.6.1)
   yum-epel (0.6.0)
     yum (~> 3.0)
+  yum-remi (0.1.0)
+    yum (>= 0.0.0)
   yum-repoforge (0.5.1)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)

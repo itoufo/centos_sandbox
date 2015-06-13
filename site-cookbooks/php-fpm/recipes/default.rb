@@ -20,3 +20,14 @@
 
 include_recipe 'php-fpm::install'
 include_recipe 'php-fpm::configure'
+
+%w{php php-cgi php-cli php-mysql php-gd php-fpm}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+service "php-fpm" do
+  supports :restart => true
+  action [ :enable, :restart ]
+end
