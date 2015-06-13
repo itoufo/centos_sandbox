@@ -1,4 +1,7 @@
 {
+  "wordpress":{
+    "version": "latest"
+  },
   "firewall":{
     "allow_ssh": true,
     "allow_html": true
@@ -9,7 +12,8 @@
   "run_list": [
     "yum-epel",
     "firewall",
-    "nginx"
+    "nginx",
+    "wordpress_nginx"
   ],
   "automatic": {
     "ipaddress": "centos7"
