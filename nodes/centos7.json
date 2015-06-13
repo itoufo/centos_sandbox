@@ -12,6 +12,7 @@
     "firewall",
     "nginx",
     "php-fpm",
+    "mysql",
     "wordpress"
   ],
   "automatic": {
