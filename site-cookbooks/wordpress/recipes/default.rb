@@ -8,18 +8,20 @@
 #
 
 # vagrant かそうでないかでuser名を変更
-wordpress = "latest.tar.gz"
+file_name = "latest.tar.gz"
+user = "vagrant"
+path = "/home/#{user}/#{file_name}"
 
-cookbook_file "/home/vagrant/"+wordpress do
-  source wordpress
+cookbook_file path do
+  source file_name
   user user
   group user
-  #path "~/#{wordpress}"
+  path path
 end
 
 execute "install wordpress" do
   user user
   group user
-  command "tar zxvf /home/vagrant/#{wordpress} -C /usr/share/nginx/html"
+  command "sudo tar zxvf #{path} -C /usr/share/nginx/html"
   action :run
 end
