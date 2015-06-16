@@ -12,6 +12,7 @@
     "firewall",
     "nginx",
     "php-fpm",
+    "selinux::disabled",
     "mysql",
     "wordpress"
   ],
