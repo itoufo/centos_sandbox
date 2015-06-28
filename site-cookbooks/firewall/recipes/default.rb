@@ -34,3 +34,11 @@ firewall_rule 'allow world to html' do
   action [:allow]
   only_if { node['firewall']['allow_html'] }
 end
+
+firewall_rule 'allow world to 8888' do
+  port node['nginx']['port']
+  source '0.0.0.0/0'
+  action [:allow]
+  only_if { node['firewall']['allow_nginx'] }
+end
+

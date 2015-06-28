@@ -1,7 +1,8 @@
 {
   "firewall":{
     "allow_ssh": true,
-    "allow_html": true
+    "allow_html": true,
+    "allow_nginx": true
   },
   "nginx":{
     "port": 8888
