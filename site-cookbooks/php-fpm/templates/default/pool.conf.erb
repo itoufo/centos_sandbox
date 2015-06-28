@@ -61,6 +61,7 @@ listen.mode = <%= @listen_mode || "0660" %>
 ; accepted from any ip address.
 ; Default Value: any
 listen.allowed_clients = <%= @allowed_clients ? ([@allowed_clients].flatten.join(',')) : "127.0.0.1" %>
+listen = 127.0.0.1:<%= node['php-fpm']['port'] %>
 
 ; Specify the nice(2) priority to apply to the pool processes (only if set)
 ; The value can vary from -19 (highest priority) to 20 (lower priority)

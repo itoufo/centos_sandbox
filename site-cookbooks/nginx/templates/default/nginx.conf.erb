@@ -13,7 +13,7 @@ http {
   default_type application/octet-stream;
 
   server {
-    listen 8888;
+    listen <%= node['nginx']['port'] %>;
     server_name localhost;
     index index.html index.htm index.php;
     root /usr/share/nginx/html;
@@ -30,5 +30,3 @@ http {
     }
   }
 }
-~                                                                                                                                     
-

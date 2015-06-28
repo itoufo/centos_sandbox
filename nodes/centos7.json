@@ -7,6 +7,11 @@
   "nginx":{
     "port": 8888
   },
+  "php-fpm":{
+    "user": "nginx",
+    "group": "nginx",
+    "port": 9000
+  },
   "run_list": [
     "yum-epel",
     "yum-remi",
